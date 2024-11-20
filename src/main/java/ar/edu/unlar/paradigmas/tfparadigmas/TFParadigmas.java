@@ -4,7 +4,8 @@
 
 package ar.edu.unlar.paradigmas.tfparadigmas;
 
-import ar.edu.unlar.paradigmas.tfparadigmas.gui.Principal;
+import ar.edu.unlar.paradigmas.tfparadigmas.gui.ABMAccidentes;
+import ar.edu.unlar.paradigmas.tfparadigmas.gui.ABMEmpleados;
 
 /**
  *
@@ -14,7 +15,12 @@ public class TFParadigmas {
 
     public static void main(String[] args) {
         
-        Principal vista = new Principal();
-        vista.setVisible(true);
+        //ABMEmpleados vista = new ABMEmpleados();
+        //vista.setVisible(true);
+        
+        ABMAccidentes ver = new ABMAccidentes();
+        ver.setVisible(false);
+        
+        
     }
 }
