@@ -1,0 +1,19 @@
+-- Table: public.empleados
+
+-- DROP TABLE IF EXISTS public.empleados;
+
+CREATE TABLE IF NOT EXISTS public.empleados
+(
+    empleado_id integer NOT NULL DEFAULT nextval('empleados_empleado_id_seq'::regclass),
+    legajo character varying COLLATE pg_catalog."default",
+    nombre character varying COLLATE pg_catalog."default",
+    apellido character varying COLLATE pg_catalog."default",
+    CONSTRAINT empleado_id_pkey PRIMARY KEY (empleado_id),
+    CONSTRAINT legajo_unique UNIQUE (legajo)
+        INCLUDE(legajo)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.empleados
+    OWNER to postgres;
